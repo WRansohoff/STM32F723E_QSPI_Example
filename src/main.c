@@ -117,9 +117,9 @@ int main( void ) {
   // Test writing some data.
   // No need to run this every time; Flash is non-volatile, but it
   // has limited "write endurance" on the order of ~10k-100k cycles.
-  //qspi_erase_sector( 0 );
-  //qspi_write_word( 0, 0x01234567 );
-  //qspi_write_word( 4, 0x89ABCDEF );
+  qspi_erase_sector( 0 );
+  qspi_write_word( 0, 0x01234567 );
+  qspi_write_word( 4, 0x89ABCDEF );
 
   // Enable memory-mapped mode. MX25L512 Flash chips use
   // 6 "dummy cycles" with Quad I/O "fast read" instructions by
